@@ -1,0 +1,15 @@
+.heading-1 {
+  font: 600 5rem/1 "Fraunces", serif;
+}
+
+@media (max-width: 800px) {
+  .heading-1 {
+    font: 600 3.75rem/1 "Fraunces", serif;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading-1 {
+    font: 600 3.125rem/1 "Fraunces", serif;
+  }
+}

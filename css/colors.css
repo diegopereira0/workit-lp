@@ -1,0 +1,27 @@
+:root {
+  --primary: #24053e;
+  --accent: #44ffa1;
+  --support-0: #ffffff;
+  --support-100: #fcf8ff;
+  --support-200: #584d62;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.support-0 {
+  color: var(--support-0);
+}
+
+.support-100 {
+  color: var(--support-100);
+}
+
+.support-200 {
+  color: var(--support-200);
+}
