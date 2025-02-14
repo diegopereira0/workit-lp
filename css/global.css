@@ -23,10 +23,25 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .btn-primary,
 .btn-secondary {
   font: 600 1.125rem/1.77 "Manrope", sans-serif;
   display: inline-block;
+  padding: 0.625rem 0;
   text-align: center;
   transition: 0.3s;
 }
@@ -57,4 +72,15 @@ ul {
   width: 100%;
   height: 3px;
   background: var(--accent);
+}
+
+@media (max-width: 800px) {
+  .btn-primary,
+  .btn-secondary {
+    font: 600 1rem/2 "Manrope", sans-serif;
+  }
+
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+  }
 }
