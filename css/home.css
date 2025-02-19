@@ -3,6 +3,7 @@ body {
   background-color: var(--support-100);
 }
 
+/* Hero */
 .hero-wrapper {
   height: 100vh;
 }
@@ -10,7 +11,7 @@ body {
 .hero-bg {
   background-color: var(--primary);
   position: relative;
-  z-index: -2;
+  z-index: 1;
   height: 70vh;
 }
 
@@ -112,6 +113,60 @@ body {
   max-width: 760px;
 }
 
+/* Diferenciais */
+.diferenciais {
+  padding-top: 5.5rem;
+  padding-bottom: 10.25rem;
+}
+
+.diferenciais-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.875rem;
+}
+
+.diferenciais-lista li {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.diferenciais-lista li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 600 1.5rem/1.66 "Fraunces", serif;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 3.5rem;
+  border: 1px solid var(--support-200);
+  border-radius: 50%;
+}
+
+.diferenciais-lista li h3 {
+  margin-bottom: 1.75rem;
+}
+
+.wave-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-2 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 50px;
+}
+
+.wave-2 .shape-fill {
+  fill: #fcf8ff;
+}
+
 @media (max-width: 800px) {
   .hero-wrapper {
     height: 75vh;
@@ -138,6 +193,47 @@ body {
   .hero-img {
     max-width: 514px;
   }
+
+  .diferenciais {
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .diferenciais-lista {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .diferenciais-lista li {
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .diferenciais-lista li span {
+    grid-column: 1 / 2;
+    grid-row: span 2;
+    font-size: 20px;
+    margin-bottom: initial;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .diferenciais-lista li h3,
+  .diferenciais-lista li p {
+    grid-column: 2 / -1;
+  }
+
+  .diferenciais-lista li h3 {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Founder */
+.founder-bg {
+  background-color: var(--support-0);
 }
 
 @media (max-width: 600px) {
@@ -156,5 +252,25 @@ body {
 
   .hero-img {
     max-width: 330px;
+  }
+
+  .diferenciais-lista {
+    row-gap: 2.5rem;
+  }
+
+  .diferenciais-lista li {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .diferenciais-lista li span,
+  .diferenciais-lista li h3,
+  .diferenciais-lista li p {
+    grid-column: 1 / -1;
+  }
+
+  .diferenciais-lista li span {
+    margin-bottom: 1.5rem;
   }
 }
