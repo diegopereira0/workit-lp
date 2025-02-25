@@ -4,15 +4,21 @@ body {
 }
 
 /* Hero */
-.hero-wrapper {
-  height: 100vh;
-}
-
 .hero-bg {
   background-color: var(--primary);
   position: relative;
   z-index: 1;
-  height: 70vh;
+}
+
+.hero-bg::after {
+  content: "";
+  background: url("../img/rectangle.svg") no-repeat top center;
+  background-size: cover;
+  display: block;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 .elements {
@@ -49,27 +55,6 @@ body {
   right: -65px;
 }
 
-.wave {
-  position: absolute;
-  bottom: -120px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: -1;
-}
-
-.wave svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 120px;
-}
-
-.wave .shape-fill {
-  fill: var(--primary);
-}
-
 .header {
   padding: 3.5rem 0;
 }
@@ -79,6 +64,11 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.hero {
+  position: relative;
+  padding-bottom: 15.625rem;
 }
 
 .hero-info {
@@ -111,12 +101,28 @@ body {
 
 .hero-img {
   max-width: 760px;
+  position: absolute;
+  bottom: -208px;
 }
 
 /* Diferenciais */
+.diferenciais-bg {
+  position: relative;
+}
+
+.diferenciais-bg::after {
+  content: "";
+  background: url("../img/rectangle-light.svg") no-repeat top center;
+  background-size: cover;
+  display: block;
+  height: 80px;
+  width: 100%;
+  position: absolute;
+}
+
 .diferenciais {
-  padding-top: 5.5rem;
-  padding-bottom: 10.25rem;
+  padding-top: 15.9375rem;
+  padding-bottom: 5.25rem;
 }
 
 .diferenciais-lista {
@@ -147,33 +153,67 @@ body {
   margin-bottom: 1.75rem;
 }
 
-.wave-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
+/* Founder */
+.founder-bg {
+  background-color: var(--support-0);
+  padding-top: 280px;
+  padding-bottom: 3.75rem;
 }
 
-.wave-2 svg {
+.founder {
+  display: flex;
   position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 50px;
+  justify-content: end;
 }
 
-.wave-2 .shape-fill {
-  fill: #fcf8ff;
+.founder-info {
+  background: var(--primary);
+  max-width: 730px;
+  z-index: 1;
+  position: relative;
+}
+
+.founder-info-bg {
+  background-color: var(--primary);
+  padding: 4rem;
+}
+
+.founder-imagem {
+  max-width: 477px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  top: -173px;
+  left: -382px;
+}
+
+.founder-info h2,
+.founder-info p {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1218px) {
+  .founder {
+    justify-content: center;
+  }
+
+  .founder-info {
+    max-width: 530px;
+  }
+
+  .founder-info-bg {
+    padding: 3rem;
+  }
+
+  .founder-imagem {
+    max-width: 280px;
+    left: -180px;
+  }
 }
 
 @media (max-width: 800px) {
-  .hero-wrapper {
-    height: 75vh;
-  }
-
-  .hero-bg {
-    height: 50vh;
+  .header {
+    padding: 2rem 0;
   }
 
   .hero-bg > .elements::before {
@@ -186,8 +226,8 @@ body {
     right: -125px;
   }
 
-  .header {
-    padding: 2rem 0;
+  .hero {
+    padding-bottom: 7rem;
   }
 
   .hero-img {
@@ -195,8 +235,8 @@ body {
   }
 
   .diferenciais {
-    padding-top: 3.5rem;
-    padding-bottom: 4.5rem;
+    padding-top: 260px;
+    padding-bottom: 0;
   }
 
   .diferenciais-lista {
@@ -229,29 +269,41 @@ body {
   .diferenciais-lista li h3 {
     margin-bottom: 1rem;
   }
-}
 
-/* Founder */
-.founder-bg {
-  background-color: var(--support-0);
+  .founder-bg {
+    padding-top: 380px;
+  }
+
+  .founder-info {
+    display: flex;
+    justify-content: center;
+  }
+
+  .founder-imagem {
+    top: -228px;
+    left: initial;
+  }
 }
 
 @media (max-width: 600px) {
-  .hero-wrapper {
-    height: 65vh;
-  }
-
-  .hero-bg {
-    height: 40vh;
-  }
-
   .hero-bg > .elements::before,
   .hero-bg > .elements::after {
     display: none;
   }
 
+  .hero {
+    padding-bottom: 4rem;
+  }
+  .hero-info > a {
+    margin-bottom: 0;
+  }
+
   .hero-img {
     max-width: 330px;
+  }
+
+  .diferenciais {
+    padding-bottom: 2rem;
   }
 
   .diferenciais-lista {
@@ -272,5 +324,10 @@ body {
 
   .diferenciais-lista li span {
     margin-bottom: 1.5rem;
+  }
+
+  .founder-info-bg {
+    padding: 2rem;
+    text-align: center;
   }
 }
