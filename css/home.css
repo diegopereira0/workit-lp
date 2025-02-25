@@ -192,6 +192,27 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Footer */
+.footer-bg {
+  background: var(--support-0);
+  padding-top: 3.75rem;
+  padding-bottom: 6.875rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.75rem;
+}
+
 @media (max-width: 1218px) {
   .founder {
     justify-content: center;
